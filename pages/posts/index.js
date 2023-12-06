@@ -3,7 +3,7 @@ import { fetchPostsAndImages } from "@/lib/posts-util";
 
 function AllPostsPage(props) {
   
-  console.log("slugs", props.posts);
+  // console.log("slugs", props.posts);
 
   return <AllPosts posts={props.posts} />;
 }
