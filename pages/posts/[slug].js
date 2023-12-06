@@ -32,7 +32,7 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   const slugs = await fetchAllPostsId();
-
+  console.log("slugs", slugs);
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
     fallback: "blocking",
