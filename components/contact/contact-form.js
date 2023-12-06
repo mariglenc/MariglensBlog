@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-
 import classes from "./contact-form.module.css";
-import Notification from "../ui/notification";
+import notificationClass from "./notification.module.css";
 
 async function sendContactData(contactDetails) {
   const response = await fetch("/api/contact", {
@@ -23,8 +22,8 @@ function ContactForm() {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredName, setEnteredName] = useState("");
   const [enteredMessage, setEnteredMessage] = useState("");
-  const [requestStatus, setRequestStatus] = useState(); // 'pending', 'success', 'error'
-  const [requestError, setRequestError] = useState();
+  const [requestStatus, setRequestStatus] = useState();
+  const [requestError, setRequestError] = useState(null);
 
   useEffect(() => {
     if (requestStatus === "success" || requestStatus === "error") {
@@ -39,10 +38,6 @@ function ContactForm() {
 
   async function sendMessageHandler(event) {
     event.preventDefault();
-
-    // optional: add client-side validation
-
-    setRequestStatus("pending");
 
     try {
       await sendContactData({
@@ -60,35 +55,21 @@ function ContactForm() {
     }
   }
 
-  let notification;
-
-  if (requestStatus === "pending") {
-    notification = {
-      status: "pending",
-      title: "Sending message...",
-      message: "Your message is on its way!",
-    };
-  }
-
-  if (requestStatus === "success") {
-    notification = {
-      status: "success",
-      title: "Success!",
-      message: "Message sent successfully!",
-    };
-  }
-
-  if (requestStatus === "error") {
-    notification = {
-      status: "error",
-      title: "Error!",
-      message: requestError,
-    };
-  }
-
   return (
     <section className={classes.contact}>
       <h1>How can I help you?</h1>
+      {requestStatus && (
+        <div className={notificationClass}>
+          {requestStatus === "success" && (
+            <p className={notificationClass.success}>
+              Message sent successfully!
+            </p>
+          )}
+          {requestStatus === "error" && (
+            <p className={notificationClass.error}>{requestError}</p>
+          )}
+        </div>
+      )}
       <form className={classes.form} onSubmit={sendMessageHandler}>
         <div className={classes.controls}>
           <div className={classes.control}>
@@ -127,13 +108,6 @@ function ContactForm() {
           <button>Send Message</button>
         </div>
       </form>
-      {notification && (
-        <Notification
-          status={notification.status}
-          title={notification.title}
-          message={notification.message}
-        />
-      )}
     </section>
   );
 }

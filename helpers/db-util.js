@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 import { ObjectId } from "mongodb";
-// const { ObjectId } = require("mongodb");
+
+const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.ntrwp.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
 
 export async function connectDatabase() {
   const client = await MongoClient.connect(
