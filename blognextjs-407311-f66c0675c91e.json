@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "blognextjs-407311",
+  "private_key_id": "f66c0675c91efba66de4cb19ba2b38296ba6b443",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDD8p/CHK2ZHqy/\nASxWfn9qe6IUXrCutBD1PGT3LAEXsQnaWd87LTGQDrEIgT7hDG+GL5YRnABEPw8q\ndxW/LtErAD1L+6QPx15sevkYn31k4Yjl3eEMvCbUMeyafBbk7TYrv8TGAZtwnGEy\nVlOA80+SlCNQgriKh2m5Cr7JUT47wBlm7tp32vR1F9wokXWv7r6dyaWAbC/XKn2e\nz2eTYvNxEwkIroqlzzat/UJKElQNDyxCSlV4HalDaYD+dpmers5huATukZ667fr1\nsolO21U8eLoXXG1D8C7syyCyHmWUpGTb3WOtUsYO3CctsfRUMXDvU/SZmi6Y1ovH\neBfLW8+jAgMBAAECggEALBrvIdKxso8IhB+/+qITjQTSGTKtI03NqV2UPlyNzGbh\nmF/1Us0b5FiiOY9Z928EpVgNt93841+sSrsuTm+7zimKIpG8Pn76PoG5kvTHVU88\nsLzuHJ83QDkSkD1RK+tG77cFFCqlccYJTLrIpfReW1hz0Hn0Dt5nCiskgY0DbJAu\nWx2i4Cfo6JRffE/edholw2RlxhZu3cSVYUhxFFUVLGWn4dcY7HaluRO25Mwj4Ad1\nDIIbiPHzFcExjPgsL6QUf03scYJYb+D2TOsBGw+JxBx/qp5lpIviKT4hf4ZrhLYR\nM+ydipiEYlBVY9RQxhkhek+AfC3NICGzCbDncBXx7QKBgQDp/5WJD8pDl5gelGEO\ntXnBRIvSFS8l/GsmwLHwDEEW6dHQ5GgmJt09klf5FVbniXLkGX1LXitHlKnfZ5Jm\njcHiO0C7vHzBtNz7tryDXYB5XLguDxtDzgu5m6En9La/N1cE+1W1puRo34Zi/IDp\nO+T4TsyBLIUitFHrYDzm+QDOjQKBgQDWXyYxWSlktx/A5iNSNu8zNOG5ctpzRNWV\ntZraaDr5CqVoo1M/VuzeIr6daH+/ozuQ1J8wYjxhFJG90mLkEINWWeEJtOIudEjS\ngkxwGNvza8l4jNbavjTvQzk2jX3PdPRZYMoERYwVV3IGK3y24qQrTnzVbATFij6m\n0UiV/O1i7wKBgQC6k0aJDaUJtfLd1xN4ZeyZ1Gzj6m44jIZnVNfL/glcGr1oIOaG\nHRDkyi4I9iHf5bFM/KHxmTlLDtdPwUZzLO590x7vUf/rd6mHrpGq8L/ChNJ6LyNf\nMggZS2T49d9MofRpjXkuqM6QbEG75XdoAJC2CCZ5jKTvIfX7hjWpOLuS9QKBgA4m\nfbjoL8lMJTZweohkw+lXZkb9g9n0Az08nZopIytpPn3nugkGTeBj3r05NqWJutbW\nkiN5eI7X8r7a8lgnluPOTwJ7BCsY1e2/WBhWK76nsMbaVRxfTdM1VsN5F4LoL3Du\n6KbbiGGoQgiSOktALqIFLkxQMwhvFa+hRO9RoMHVAoGBALFlQfrY3prkCUeGH18Z\nk0aAnftH+PXtjXXbbqiN2CoOcW4lwjPwbTb+SONN5v0vHHrDohNHWkAIe+9yKeXe\nMljo0w/BhC2EB91frHXTDTQVuJxWfEEiezqj7xlEz5Id78kzvlY9JtsqIvjpuOaI\n4+dQd28UHLC0cvm0MyZVtl4j\n-----END PRIVATE KEY-----\n",
+  "client_email": "nextjsblog@blognextjs-407311.iam.gserviceaccount.com",
+  "client_id": "106305033319709584994",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nextjsblog%40blognextjs-407311.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
