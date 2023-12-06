@@ -2,6 +2,9 @@ import AllPosts from "@/components/posts/all-posts";
 import { fetchPostsAndImages } from "@/lib/posts-util";
 
 function AllPostsPage(props) {
+  
+  console.log("slugs", props.posts);
+
   return <AllPosts posts={props.posts} />;
 }
 
@@ -15,5 +18,4 @@ export async function getStaticProps() {
       posts,
     },
   };
- 
 }
