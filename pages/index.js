@@ -4,6 +4,7 @@ import FeaturedPosts from "@/components/home-page/featured-posts";
 import { fetchFeaturedPosts } from "@/lib/posts-util";
 
 export default function Home(props) {
+  console.log("process.env.NODE_ENV", process.env.NODE_ENV);
   return (
     <Fragment>
       <Hero />
