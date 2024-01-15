@@ -1,19 +1,29 @@
 import { useState } from "react";
-import classes from "./contact-form.module.css";
-// import notificationClass from "./notification.module.css";
-
+import classes from "./contact-form.module.css";  
+import { signIn, getCsrfToken } from "next-auth/react";
+import { getSession } from "next-auth/react";
 function AdminPageForm() {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
-
-  async function sendMessageHandler(event) {
+  
+  async function loginHandler(event) {
     event.preventDefault();
+    console.log("enteredEmail", enteredEmail);
+    console.log("enteredPassword", enteredPassword);
+    const result = await signIn('credentials', {
+      redirect: false,
+      email: enteredEmail,
+      password: enteredPassword,
+    });
+    console.log("result", result);
+    const session = await getSession();
+    console.log("session", session);
   }
 
   return (
     <section className={classes.contact}>
       <h1>Log in to admin page</h1>
-      <form className={classes.form} onSubmit={sendMessageHandler}>
+      <form className={classes.form} onSubmit={loginHandler}>
         <div className={classes.controls}>
           <div className={classes.control}>
             <label htmlFor="email">Your Email</label>

@@ -3,19 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "cross-env NEXT_ENV=staging next dev",
+    "start:staging": "cross-env NEXT_ENV=staging next start",
+    "build:staging": "cross-env NEXT_ENV=staging next build",
     "lint": "next lint"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
     "google-auth-library": "^9.4.1",
     "googleapis": "^129.0.0",
     "gray-matter": "^4.0.3",
     "mongodb": "^6.3.0",
     "next": "14.0.3",
+    "next-auth": "^4.24.5",
     "react": "^18",
     "react-dom": "^18",
     "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+    "dotenv-expand": "^10.0.0",
+    "dotenv-flow": "^4.1.0"
   }
 }

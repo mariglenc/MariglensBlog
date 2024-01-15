@@ -45,3 +45,21 @@ export async function getDocumentById(client, collection, id) {
     throw error;
   }
 }
+
+export async function deleteDocumentById(client, collection, id) {z
+  const db = client.db();
+  try {
+    const result = await db.collection(collection).deleteOne({ _id: new ObjectId(id) });
+
+    if (result.deletedCount === 0) {
+      console.log("Document not found for deletion");
+      return false;
+    }
+
+    console.log("Document deleted successfully");
+    return true;
+  } catch (error) {
+    console.error("Error deleting document by ID:", error);
+    throw error;
+  }
+}
